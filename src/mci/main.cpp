@@ -4,13 +4,15 @@
 #include <string>
 #include <functional>
 
-#include "monte_carlo_integration.h"
-#include "numeric_types.h"
+#include "mci/monte_carlo_integration.h"
+#include "mci/numeric_types.h"
 
-void show_integration(std::string description, 
+void show_integration(
+		std::string description, 
 		const std::function<mci::RealType(const mci::RealType&)>& base_function,
-		const std::size_t& num_samples, const mci::RealType& lower_bound, 
-		const mci::RealType& upper_bound) {
+		std::size_t num_samples, 
+		mci::RealType lower_bound, 
+		mci::RealType upper_bound) {
 	std::cout << "Integrating " << description << " over [" << lower_bound << ", " << upper_bound << "]" <<
 			" using " << num_samples << " samples." << std::endl;
 	const mci::RealType integral = mci::monte_carlo_integral(base_function, num_samples, lower_bound, upper_bound);

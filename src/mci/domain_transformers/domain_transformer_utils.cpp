@@ -1,9 +1,10 @@
-#include "domain_transformer_utils.h"
+#include "mci/domain_transformers/domain_transformer_utils.h"
 
 namespace mci {
 
-std::unique_ptr<mci::DomainTransformer> choose_domain_transformer(const mci::RealType& lower_bound, 
-			const mci::RealType& upper_bound) {
+std::unique_ptr<mci::DomainTransformer> 
+choose_domain_transformer(const mci::RealType& lower_bound, const mci::RealType& upper_bound) 
+{
 	assert (lower_bound < upper_bound);
 	std::unique_ptr<mci::DomainTransformer> domain_transformer;	
 	if (mci::is_negative_infinity(lower_bound) && mci::is_infinity(upper_bound)) {

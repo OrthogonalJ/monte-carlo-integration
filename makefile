@@ -1,8 +1,8 @@
 #### MACROS ####
 
 CC=gcc
-SRC_DIR=src
-INC_DIR=include
+SRC_DIR=src/mci
+INC_DIR=include/mci
 OBJ_DIR=obj
 BUILD_DIR=build
 TEST_DIR=test

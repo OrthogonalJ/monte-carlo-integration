@@ -2,7 +2,7 @@
 #define DOMAIN_TRANSFORMERS__DOMAIN_TRANSFORMER_H_
 
 #include <iostream>
-#include "numeric_types.h"
+#include "mci/numeric_types.h"
 
 namespace mci {
 

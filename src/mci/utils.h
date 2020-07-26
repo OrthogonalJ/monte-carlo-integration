@@ -2,7 +2,7 @@
 #define UTILS_H_
 
 #include <limits>
-#include "numeric_types.h"
+#include "mci/numeric_types.h"
 
 namespace mci {
 

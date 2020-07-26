@@ -2,8 +2,8 @@
 #define DOMAIN_TRANSFORMERS__LOWER_CLOSED_TO_UNIF_DOMAIN_TRANSFORMER_H_
 
 #include <cmath>
-#include "numeric_types.h"
-#include "domain_transformer.h"
+#include "mci/numeric_types.h"
+#include "mci/domain_transformers/domain_transformer.h"
 
 namespace mci {
 

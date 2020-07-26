@@ -1,8 +1,8 @@
 #ifndef DOMAIN_TRANSFORMERS__FINITE_INTERVAL_TO_UNIF_DOMAIN_TRANSFORMER_H_
 #define DOMAIN_TRANSFORMERS__FINITE_INTERVAL_TO_UNIF_DOMAIN_TRANSFORMER_H_
 
-#include "numeric_types.h"
-#include "domain_transformer.h"
+#include "mci/numeric_types.h"
+#include "mci/domain_transformers/domain_transformer.h"
 
 namespace mci {
 

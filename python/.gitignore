@@ -1,0 +1,4 @@
+# Build outputs
+build
+mci/**/*.pyd
+**__pycache__
