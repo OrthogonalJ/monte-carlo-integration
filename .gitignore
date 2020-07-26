@@ -1,0 +1,12 @@
+#### IDE/Editor Configs ####
+# Eclipse
+.settings
+.cproject
+.project
+# vscode
+.vscode
+
+#### Build Outputs ####
+build
+obj
+
