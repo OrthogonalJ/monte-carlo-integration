@@ -124,16 +124,18 @@ ext_modules = [
         standardize_src_file_paths(
             [
                 'cpp_api/mci_cpp_module.cpp', 
-                *core_src_files
+                #*core_src_files
             ], 
             relative_to_dir='.'
         ),
         include_dirs=[
             MCI_INCLUDE_DIR,
-            MCI_SRC_DIR,
+            #MCI_SRC_DIR,
             # Path to pybind11 headers
             get_pybind_include()
         ],
+        library_dirs=['../dist/libs/shared'],
+        libraries=['mci_shared'],
         language='c++'
     ),
 ]

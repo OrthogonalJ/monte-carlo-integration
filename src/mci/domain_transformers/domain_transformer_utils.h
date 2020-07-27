@@ -15,8 +15,8 @@
 
 namespace mci {
 
-std::unique_ptr<mci::DomainTransformer> choose_domain_transformer(
-		const mci::RealType& lower_bound, const mci::RealType& upper_bound);
+std::unique_ptr<mci::DomainTransformer> 
+choose_domain_transformer(mci::RealType lower_bound, mci::RealType upper_bound);
 
 }
 

@@ -10,10 +10,10 @@
 namespace mci {
 
 mci::RealType monte_carlo_integral(
-	const std::function<RealType(const RealType&)>& base_function,
-	const std::size_t num_samples, 
-	const mci::RealType lower_bound, 
-	const mci::RealType upper_bound
+	const std::function<RealType(RealType)>& base_function,
+	long long num_samples, 
+	mci::RealType lower_bound, 
+	mci::RealType upper_bound
 );
 
 }

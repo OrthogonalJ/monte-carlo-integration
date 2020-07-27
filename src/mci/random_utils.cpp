@@ -15,7 +15,7 @@ std::default_random_engine& get_global_random_engine() {
 }
 
 void set_global_seed(unsigned seed) {
-    std::default_random_engine engine = get_global_random_engine();
+    std::default_random_engine& engine = get_global_random_engine();
     engine.seed(seed);
 }
 

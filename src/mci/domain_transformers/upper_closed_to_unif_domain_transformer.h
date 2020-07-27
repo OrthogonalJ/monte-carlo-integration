@@ -13,8 +13,8 @@ private:
 public:
 	UpperClosedToUnifDomainTransformer(mci::RealType upper_bound);
 	virtual ~UpperClosedToUnifDomainTransformer();
-	virtual mci::RealType get_value(const mci::RealType& unif_val) const;
-	virtual mci::RealType get_dx_dy(const mci::RealType& u) const;
+	virtual mci::RealType get_value(mci::RealType unif_val) const;
+	virtual mci::RealType get_dx_dy(mci::RealType u) const;
 };
 
 }

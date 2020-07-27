@@ -5,28 +5,28 @@
 namespace mci {
 
 mci::RealType monte_carlo_integral(
-		const std::function<mci::RealType(const mci::RealType&)>& base_function, 
-		const std::size_t num_samples,
+		const std::function<mci::RealType(mci::RealType)>& base_function, 
+		long long num_samples,
 		const std::unique_ptr<mci::DomainTransformer>& domain_transformer) {
-	static std::default_random_engine rng = mci::get_global_random_engine();
+	std::default_random_engine& rng = mci::get_global_random_engine();
 	std::uniform_real_distribution<mci::RealType> unif_dist(0.0, 1.0);
 
-	mci::RealType running_total = 0;
-	for (size_t i = 0; i < num_samples; ++i) {
+	mci::RealType running_mean = 0;
+	for (long long i = 0; i < num_samples; ++i) {
 		mci::RealType unif_val = unif_dist(rng);
 		mci::RealType integrand = domain_transformer->get_value(unif_val);
 		mci::RealType dx_dy = domain_transformer->get_dx_dy(unif_val);
-		running_total += base_function(integrand) * dx_dy;
+		running_mean += base_function(integrand) * dx_dy / num_samples;
 	}
 
-	return running_total / num_samples;
+    return running_mean;
 }
 
 mci::RealType monte_carlo_integral(
-		const std::function<RealType(const RealType&)>& base_function,
-		const std::size_t num_samples, 
-		const mci::RealType lower_bound, 
-		const mci::RealType upper_bound) {
+		const std::function<RealType(RealType)>& base_function,
+		long long num_samples, 
+		mci::RealType lower_bound, 
+		mci::RealType upper_bound) {
 	std::unique_ptr<mci::DomainTransformer> domain_transformer = mci::choose_domain_transformer(lower_bound, upper_bound);
 	return mci::monte_carlo_integral(base_function, num_samples, domain_transformer);
 }

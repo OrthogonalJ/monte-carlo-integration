@@ -10,7 +10,7 @@
 void show_integration(
 		std::string description, 
 		const std::function<mci::RealType(const mci::RealType&)>& base_function,
-		std::size_t num_samples, 
+		long long num_samples, 
 		mci::RealType lower_bound, 
 		mci::RealType upper_bound) {
 	std::cout << "Integrating " << description << " over [" << lower_bound << ", " << upper_bound << "]" <<
@@ -20,7 +20,7 @@ void show_integration(
 }
 
 int main(int argv, char** argc) {
-	const std::size_t num_samples = 1e+7;
+	constexpr long long num_samples = 1e+7;
 	
 	show_integration(
 		"Exp[-(x^2)]",

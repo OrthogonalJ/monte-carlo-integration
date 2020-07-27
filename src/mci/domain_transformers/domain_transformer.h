@@ -10,8 +10,8 @@ class DomainTransformer {
 public:
 	DomainTransformer() {};
 	virtual ~DomainTransformer() {};
-	virtual RealType get_value(const RealType&) const;
-	virtual RealType get_dx_dy(const RealType&) const;
+	virtual RealType get_value(RealType) const;
+	virtual RealType get_dx_dy(RealType) const;
 };
 
 }

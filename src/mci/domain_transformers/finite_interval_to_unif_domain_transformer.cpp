@@ -8,15 +8,11 @@ FiniteIntervalToUnifDomainTransformer::FiniteIntervalToUnifDomainTransformer(
 
 FiniteIntervalToUnifDomainTransformer::~FiniteIntervalToUnifDomainTransformer() {}
 
-mci::RealType 
-FiniteIntervalToUnifDomainTransformer::get_value(const mci::RealType& u) const 
-{
+mci::RealType FiniteIntervalToUnifDomainTransformer::get_value(mci::RealType u) const {
 	return this->lower_bound + (this->upper_bound - this->lower_bound) * u;
 }
 
-mci::RealType 
-FiniteIntervalToUnifDomainTransformer::get_dx_dy(const mci::RealType& u) const 
-{
+mci::RealType FiniteIntervalToUnifDomainTransformer::get_dx_dy(mci::RealType u) const {
 	return this->upper_bound - this->lower_bound;
 }
 

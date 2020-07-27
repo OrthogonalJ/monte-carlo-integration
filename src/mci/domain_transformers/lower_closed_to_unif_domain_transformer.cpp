@@ -9,13 +9,12 @@ LowerClosedToUnifDomainTransformer::LowerClosedToUnifDomainTransformer(mci::Real
 LowerClosedToUnifDomainTransformer::~LowerClosedToUnifDomainTransformer() {};
 	
 mci::RealType
-LowerClosedToUnifDomainTransformer::get_value(const mci::RealType& u) const 
-{
+LowerClosedToUnifDomainTransformer::get_value(mci::RealType u) const {
 	return this->lower_bound - std::log(1.0 - u);
 }
 
 mci::RealType 
-LowerClosedToUnifDomainTransformer::get_dx_dy(const mci::RealType& u) const 
+LowerClosedToUnifDomainTransformer::get_dx_dy(mci::RealType u) const 
 {
 	return 1.0 / (1.0 - u);
 }

@@ -7,14 +7,12 @@ OpenRealToUniformDomainTransformer::OpenRealToUniformDomainTransformer() {}
 OpenRealToUniformDomainTransformer::~OpenRealToUniformDomainTransformer() {}
 	
 mci::RealType
-OpenRealToUniformDomainTransformer::get_value(const mci::RealType& unif_value) const 
-{
+OpenRealToUniformDomainTransformer::get_value(mci::RealType unif_value) const {
 	return std::log(unif_value / (1.0 - unif_value));
 }
 	
 mci::RealType 
-OpenRealToUniformDomainTransformer::get_dx_dy(const mci::RealType& unif_value) const 
-{
+OpenRealToUniformDomainTransformer::get_dx_dy(mci::RealType unif_value) const {
 	return 1.0 / (unif_value * (1.0 - unif_value));
 }
 

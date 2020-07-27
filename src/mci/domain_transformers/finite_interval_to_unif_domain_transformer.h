@@ -13,8 +13,8 @@ private:
 public:
 	FiniteIntervalToUnifDomainTransformer(mci::RealType lower_bound, mci::RealType upper_bound);
 	virtual ~FiniteIntervalToUnifDomainTransformer();
-	virtual mci::RealType get_value(const mci::RealType& u) const;
-	virtual mci::RealType get_dx_dy(const mci::RealType& u) const;
+	virtual mci::RealType get_value(mci::RealType u) const;
+	virtual mci::RealType get_dx_dy(mci::RealType u) const;
 };
 
 }

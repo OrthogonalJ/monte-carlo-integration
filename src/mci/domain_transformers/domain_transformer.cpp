@@ -2,16 +2,12 @@
 
 namespace mci {
 
-RealType 
-DomainTransformer::get_value(const RealType&) const 
-{
+mci::RealType DomainTransformer::get_value(RealType) const {
 	std::cout << "DomainTransformer::get_value called" << std::endl;
 	throw "NOT_IMPLEMENTED_ERROR";
 }
 
-RealType 
-DomainTransformer::get_dx_dy(const RealType&) const 
-{
+mci::RealType DomainTransformer::get_dx_dy(RealType) const {
 	std::cout << "DomainTransformer::get_dx_dy called" << std::endl;
 	throw "NOT_IMPLEMENTED_ERROR";
 };

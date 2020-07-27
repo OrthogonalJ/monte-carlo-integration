@@ -6,11 +6,11 @@
 
 namespace mci {
 
-bool is_infinity(const mci::RealType& value);
+bool is_infinity(mci::RealType value);
 
-bool is_negative_infinity(const mci::RealType& value);
+bool is_negative_infinity(mci::RealType value);
 
-bool is_finite(const mci::RealType& value);
+bool is_finite(mci::RealType value);
 
 }
 

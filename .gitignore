@@ -7,6 +7,9 @@
 .vscode
 
 #### Build Outputs ####
-build
+dist
 obj
-
+bazel-bin
+bazel-monte-carlo-integration2
+bazel-out
+bazel-testlogs

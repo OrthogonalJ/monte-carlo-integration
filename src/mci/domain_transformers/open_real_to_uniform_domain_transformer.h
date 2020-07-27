@@ -11,8 +11,8 @@ class OpenRealToUniformDomainTransformer : public mci::DomainTransformer {
 public:
 	OpenRealToUniformDomainTransformer();
 	virtual ~OpenRealToUniformDomainTransformer();
-	virtual RealType get_value(const mci::RealType& unif_value) const;
-	virtual RealType get_dx_dy(const mci::RealType& unif_value) const;
+	virtual RealType get_value(mci::RealType unif_value) const;
+	virtual RealType get_dx_dy(mci::RealType unif_value) const;
 };
 
 }
