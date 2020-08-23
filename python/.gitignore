@@ -1,4 +1,4 @@
 # Build outputs
-dist
+build
 mci/**/*.pyd
 **__pycache__

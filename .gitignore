@@ -5,11 +5,13 @@
 .project
 # vscode
 .vscode
+# Visual Studio
+.vs
 
 #### Build Outputs ####
-dist
+build
 obj
-bazel-bin
-bazel-monte-carlo-integration2
-bazel-out
-bazel-testlogs
+
+
+#### Env Specific Configs ####
+setup_env.local.bat

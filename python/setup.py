@@ -134,9 +134,10 @@ ext_modules = [
             # Path to pybind11 headers
             get_pybind_include()
         ],
-        library_dirs=['../dist/libs/shared'],
-        libraries=['mci_shared'],
-        language='c++'
+        library_dirs=['../build/libs/static'],
+        libraries=['mci_static'],
+        language='c++',
+        depends=glob.glob('../build/libs/static/**', recursive=True)
     ),
 ]
 
